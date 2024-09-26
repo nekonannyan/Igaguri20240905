@@ -12,7 +12,16 @@ public class Target : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Sd.Score += 1;
+
+        if (collision.gameObject.CompareTag("bigIgaguri"))
+        {
+            GetComponent<ParticleSystem>().Play();
+            Sd.Score *= 3;
+        }
+        else
+        {
+            Sd.Score += 1;
+        }
         Debug.Log("ƒ|ƒCƒ“ƒg’Ç‰Á");
     }
 }

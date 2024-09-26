@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class GameTimer : MonoBehaviour
 {
     //カウントダウン
-    public float countdown = 5.0f;
+    public float countdown = 60.0f;
 
     //時間を表示するText型の変数
     public TextMeshProUGUI timeText;

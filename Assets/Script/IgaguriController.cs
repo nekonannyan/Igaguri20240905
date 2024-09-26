@@ -21,6 +21,7 @@ public class IgaguriController : MonoBehaviour
         {
             GetComponent<Rigidbody>().isKinematic = true;
             GetComponent<ParticleSystem>().Play();
+            Destroy(gameObject,0.3f);
         }
     }
 }

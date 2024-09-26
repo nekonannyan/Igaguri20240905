@@ -8,5 +8,6 @@ public class StartButton : MonoBehaviour
     public void change_button()
     {
         SceneManager.LoadScene("Game");
+        Destroy( GameObject.Find("ScoreData"));
     }
 }
