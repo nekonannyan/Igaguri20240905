@@ -11,8 +11,11 @@ public class CameraController : MonoBehaviour
     public Vector3 startPosition = new Vector3(0, 0, 3);
     public Vector3 endPosition = new Vector3(0, 5,10);
 
+    public GameTimer gameTimer;
+
     private void Start()
     {
+        gameTimer.PausedTimer();
         StartCoroutine(CameraTranstion());
     }
     private IEnumerator CameraTranstion()
@@ -36,5 +39,8 @@ public class CameraController : MonoBehaviour
         //メインカメラをアクティブにする
         EffectCamera.enabled=false;
         MainCamera.enabled = true;
+
+        //演出が終わったらタイマーを開始
+        gameTimer.StartTimer();
     }
 }

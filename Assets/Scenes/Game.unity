@@ -425,6 +425,7 @@ MonoBehaviour:
   transitionDuration: 2
   startPosition: {x: 0, y: 0, z: 3}
   endPosition: {x: 0, y: 5, z: 10}
+  gameTimer: {fileID: 1148295458}
 --- !u!4 &311021476
 Transform:
   m_ObjectHideFlags: 0
@@ -945,6 +946,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countdown: 60
   timeText: {fileID: 246999566}
+  isPaused: 0
 --- !u!4 &1148295459
 Transform:
   m_ObjectHideFlags: 0
