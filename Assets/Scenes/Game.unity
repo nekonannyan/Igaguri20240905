@@ -426,6 +426,7 @@ MonoBehaviour:
   startPosition: {x: 0, y: 1, z: -5}
   endPosition: {x: 0, y: 7, z: 10}
   gameTimer: {fileID: 1148295458}
+  target: {fileID: 1986425963}
 --- !u!4 &311021476
 Transform:
   m_ObjectHideFlags: 0
