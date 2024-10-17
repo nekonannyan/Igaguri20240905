@@ -6,12 +6,14 @@ public class CameraController : MonoBehaviour
 {
     public Camera MainCamera;
     public Camera EffectCamera;
-    public float transitionDuration = 2.0f;
+    public float transitionDuration = 5.0f;
 
-    public Vector3 startPosition = new Vector3(0, 0, 3);
-    public Vector3 endPosition = new Vector3(0, 5,10);
+    public Vector3 startPosition = new Vector3(0, 5, 3);
+    public Vector3 endPosition = new Vector3(0, 10,10);
 
     public GameTimer gameTimer;
+
+    [SerializeField] GameObject target;
 
     private void Start()
     {
@@ -24,12 +26,14 @@ public class CameraController : MonoBehaviour
         MainCamera.enabled = false;
         EffectCamera.enabled = true;
         EffectCamera.transform.position = startPosition;
+
         float elapsedTime = 0f;
 
         while (elapsedTime < transitionDuration)
         {
             //Lerp関数で位置を補間して移動
-            EffectCamera.transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime/transitionDuration);
+            //EffectCamera.transform.position = Vector3.Lerp(startPosition, endPosition, elapsedTime/transitionDuration);
+            EffectCamera.transform.RotateAround(target.transform.position, new Vector3(0, 1, 0), 0.2f);
             elapsedTime += Time.deltaTime;
             //次のフレームまで待機
             yield return null;
